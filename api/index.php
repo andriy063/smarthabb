@@ -12,7 +12,7 @@ switch ($act) {
 
   case 'ping':
 
-  
+
     renderJSON(['status' => 'success', 'data' => ['message' => 'ok', 'timestamp' => time()]]);
   break;
 
@@ -21,9 +21,9 @@ switch ($act) {
   break;
 
   case 'unauthorized':
-    renderJSON(['status' => 'error', 'data' => ['code' => '10001', 'message' => 'Unauthorized']]);
+    renderJSON(['status' => 'error', 'data' => ['code' => '1', 'message' => 'Unauthorized']]);
   break;
   default:
-    renderJSON(['status' => 'error', 'data' => ['code' => '10000', 'message' => 'Unknown method']]);
+    renderJSON(['status' => 'error', 'data' => ['code' => '3', 'message' => 'Unknown method']]);
   break;
 }

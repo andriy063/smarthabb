@@ -14,8 +14,10 @@ $devices = [];
 try {
   $devices = $db->get('devices');
 } catch (Exception $e) {
-  if ($config['dev_mode']) { var_dump($e); }
-  exit('DB error');
+  if ($config['dev_mode']) {
+		dev_log('DB error', 4, $e);
+	}
+	renderJSON(['status' => 'error', 'data' => ['code' => '4', 'message' => 'DB error']]);
 }
 
 
