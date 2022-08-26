@@ -1,0 +1,5 @@
+.ftpconfig
+*.ftpconfig
+*ftpconfig
+/.ftpconfig
+/res/php/env.php
